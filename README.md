@@ -137,7 +137,7 @@ module load intel/2020.4.304.mpi
 
 mpiexec -np 32 /appl/lumerical/2024-R2.03/bin/fdtd-engine-impi-lcl -t 1-logall -remote {PROJECT_FILE_PATH}
 ```
-This submission script is based on the example reported in `/appl/lumerical/jobscript2024.sh/` with some variations. Note that we use `'` instead of `"` otherwise it will not work.
+This submission script is based on the example reported in `/appl/lumerical/jobscript2024.sh/` with some variations. Note that we use `'` instead of `"` otherwise it will not work. Remember to insert a valid username. 
 
 > **Note:**  
 > <span style="color:red">Note that this example works for FDTD simulations. If you want to make it work for EME of FDE simulations you need to use another engine. For example, for EME simulations you need to use `eme-engine-impi-lcl` instead of `fdtd-engine-impi-lcl`. A list of all the engines can be found using the command `ls /appl/lumerical/2024-R2.03/bin` on DTU HPC.</span>
@@ -184,10 +184,10 @@ The original script has two problems:
 ![alt text](pics/job_details.png)
 
 
-4. The simulation progrss bar does not progress after the simulation enter in the status "Running". Also, when the simulation finishes, some time is required to copy the file on the client. Consider to check the job details to check when the simulation is done - but if you entered your email on the submission script you should also receive an email when the simulation is Done. 
+4. The simulation progrss bar does not progress after the simulation enter in the status "Running". Also, when the simulation finishes, some time is required to copy the file on the client. Consider to check the job details to know when the simulation is done - but if you entered your email on the submission script you should also receive an email when the simulation is Done. 
 
 5. Consider to edit the simulation script if you want to use a different queue (i.e. hpc instead of fotonano if you still do not have access to it, the number of cores, or the engine in the case of the MODE FDE GUI).
 
-6. If you have any questions or some suggestions - plese contact me (enrico.vallar2000@gmail.com , s232699@dtu.dk)
+6. If you have any questions or some suggestions - please contact me (enrico.vallar2000@gmail.com , s232699@dtu.dk)
 
 
