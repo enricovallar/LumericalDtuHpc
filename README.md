@@ -1,2 +1,5 @@
-# lumerical_dtu_hpc_lsf
-Test
+# Ansys Lumerical: LSF jobs using DTU HPC
+
+## Introduction 
+
+Lumerical 
